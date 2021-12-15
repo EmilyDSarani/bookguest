@@ -1,4 +1,4 @@
-import { useContext, createContext, useState, useEffect } from 'react'
+import { useContext, createContext, useState } from 'react'
 
 //Create Context
 //Remember that this is the start of our recipe
@@ -7,12 +7,12 @@ const NoteContext = createContext()
 //Create Provider
 //Remember that the provider is giving us access to the recipe book
 const NoteProvider = ({ children }) =>{
-    const [note, setNote] = useState(
+    const [notes, setNote] = useState(
         //might need to drop a useEffect here later on
 
 
     {})
-    return <NoteContext.Provider value={{note, setNote}}>{children}</NoteContext.Provider>   
+    return <NoteContext.Provider value={{notes, setNote}}>{children}</NoteContext.Provider>   
 }
 
 //Create Custom Hook

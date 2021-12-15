@@ -1,4 +1,4 @@
-import { useContext, createContext, useState, useEffect } from 'react'
+import { useContext, createContext, useState } from 'react'
 
 //Create Context
 //Remember that this is the start of our recipe
@@ -12,7 +12,7 @@ const UserProvider = ({ children }) =>{
 
 
     {})
-    return <UserContext.Provider value={{user, setUser}}>{children}</UserContext.Provider>   
+    return <UserContext.Provider value={{ user, setUser }}>{children}</UserContext.Provider>   
 }
 
 //Create Custom Hook

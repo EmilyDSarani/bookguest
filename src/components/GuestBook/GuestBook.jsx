@@ -20,7 +20,7 @@ export default function GuestBook() {
         //we want to spread the notes so that it will render all of the notes we have
         //we then want to be able to set the user name and their message
         //this is the larger notes that is being kept globally
-        setNotes([...notes, {name, message: inputNote}])
+        setNotes((prev) => [...prev, {name, message: inputNote}])
         //then i will need to setGuessNote...to maybe an empty string?
         //after user hits the button to add the note, this will render an empty string to clear it out
         setInputNote('')
@@ -34,27 +34,29 @@ export default function GuestBook() {
 const nameDisplay =(
     <div>
         <div>
-            <label>
+            <label className="labelText" htmlFor="user">
                 Your Name
             </label>
         </div>
         {/* all of the user name info will go here */}
         <input 
-        id="name"
+        id="user"
         type="text"
         placeholder="Your name"
-        value={name}
+        value={user.name}
         onChange={(e) => setName(e.target.value)}/>
     </div>
 )
+    const displayMessage = user.name ? `Thanks ${user.name}!` : 'Sign Thing!'
     return (
+    
         <>
-            <h1>GuestBook</h1>
+        <h1>{displayMessage}</h1>
             <form onSubmit={handleSubmit}>
-                {/* {user ? null : nameDisplay} */}
+                {user ? null : nameDisplay}
             <div>
                 <div>
-                    <label>
+                    <label className="labelText" htmlFor="inputNote">
                         Enter Message
                     </label>
                 </div>
@@ -63,17 +65,24 @@ const nameDisplay =(
                     <textarea 
                     id="inputNote"
                     value={inputNote}
+                    placeholder="Your Note!"
                     onChange={(e)=> setInputNote(e.target.value)} />
                 </div>
             </div>
             <div>
-                <button>
+                <button className= "button" type="submit">
                     Sign
                 </button>
-
-                <button>
+                {user && (
+                <button
+                type="button"
+                onClick={()=>{
+                    setUser('')
+                    setName('')
+                }}>
                     Not User?
                 </button>
+                 )}  
             </div>
             </form>
         </>
