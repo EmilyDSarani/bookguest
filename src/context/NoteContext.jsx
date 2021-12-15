@@ -7,12 +7,12 @@ const NoteContext = createContext()
 //Create Provider
 //Remember that the provider is giving us access to the recipe book
 const NoteProvider = ({ children }) =>{
-    const [notes, setNote] = useState(
+    const [notes, setNotes] = useState(
         //might need to drop a useEffect here later on
 
 
     {})
-    return <NoteContext.Provider value={{notes, setNote}}>{children}</NoteContext.Provider>   
+    return <NoteContext.Provider value={{notes, setNotes}}>{children}</NoteContext.Provider>   
 }
 
 //Create Custom Hook

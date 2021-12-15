@@ -8,7 +8,7 @@ export default function NoteList() {
     return (
         <div>
             <h1>Notes</h1>
-            {/* <ul>
+            <ul>
              {notes.map((note)=> {
                  return(
                     <li key={`${note.name}`}>
@@ -16,7 +16,7 @@ export default function NoteList() {
                     </li> 
                  )
              })}   
-            </ul> */}
+            </ul>
         </div>
     )
 }

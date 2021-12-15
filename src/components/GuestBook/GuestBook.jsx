@@ -20,7 +20,7 @@ export default function GuestBook() {
         //we want to spread the notes so that it will render all of the notes we have
         //we then want to be able to set the user name and their message
         //this is the larger notes that is being kept globally
-        setNotes((prev) => [...prev, {name, message: inputNote}])
+        setNotes([...notes, {name, message: inputNote}])
         //then i will need to setGuessNote...to maybe an empty string?
         //after user hits the button to add the note, this will render an empty string to clear it out
         setInputNote('')
@@ -47,7 +47,7 @@ const nameDisplay =(
         onChange={(e) => setName(e.target.value)}/>
     </div>
 )
-    const displayMessage = user.name ? `Thanks ${user.name}!` : 'Sign Thing!'
+    const displayMessage = user ? `Thanks ${name}!` : 'Sign Book!'
     return (
     
         <>
