@@ -1,9 +1,15 @@
-import React from 'react-dom'
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
+import { UserProvider }  from './context/UserContext'
+import { NoteProvider } from './context/NoteContext'
 
-test.skip('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText('Notes');
-  expect(linkElement).toBeInTheDocument();
+test('renders App', () => {
+  const {container} = 
+  render(
+<UserProvider> 
+<NoteProvider>      
+<App />
+</NoteProvider>
+</UserProvider>,);
+  expect(container).toMatchSnapshot();
 });
