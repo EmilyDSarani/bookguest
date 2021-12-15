@@ -1,3 +1,3 @@
 // eslint-disable-next-line
-// module.exports = '/path/image';
-//meh
+module.exports = '/path/image';
+

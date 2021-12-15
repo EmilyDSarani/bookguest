@@ -80,7 +80,7 @@ const nameDisplay =(
                     setUser('')
                     setName('')
                 }}>
-                    Not {user}?
+                    Not {name}?
                 </button>
                  )}  
             </div>
