@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNote } from '../../context/NoteContext'
+import { useNotes } from '../../context/NoteContext'
 import { useUser } from '../../context/UserContext'
 
 
@@ -7,7 +7,7 @@ export default function GuestBook() {
     const [name, setName] = useState('')
     const [inputNote, setInputNote] = useState('')
     //now we we need to access the Note state and User state 
-    const { notes, setNotes } = useNote()
+    const { notes, setNotes } = useNotes()
     const { user, setUser} = useUser()
 
     function NameUpdate(){
@@ -80,7 +80,7 @@ const nameDisplay =(
                     setUser('')
                     setName('')
                 }}>
-                    Not User?
+                    Not {user}?
                 </button>
                  )}  
             </div>

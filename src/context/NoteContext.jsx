@@ -16,7 +16,7 @@ const NoteProvider = ({ children }) =>{
 }
 
 //Create Custom Hook
-const useNote = () => {
+const useNotes = () => {
     const context = useContext(NoteContext)
 
     if(context === undefined){
@@ -26,4 +26,4 @@ const useNote = () => {
     return context
 }
 
-export {NoteProvider, useNote}
+export {NoteProvider, useNotes}

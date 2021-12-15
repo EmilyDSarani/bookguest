@@ -1,22 +1,22 @@
 import React from 'react'
 import Note from '../Note/Note'
-import { useNote } from '../../context/NoteContext'
+import { useNotes } from '../../context/NoteContext'
 
 export default function NoteList() {
-    const { notes } = useNote()
+    const { notes } = useNotes()
 
     return (
         <div>
             <h1>Notes</h1>
-            <ul>
+            {/* <ul>
              {notes.map((note)=> {
                  return(
-                    <li key={`${note.name}`}>
+                    <li key={`${note.name}-${note.message}`}>
                     <Note note={note} />
                     </li> 
                  )
              })}   
-            </ul>
+            </ul> */}
         </div>
     )
 }
