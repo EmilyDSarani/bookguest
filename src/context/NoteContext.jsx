@@ -7,11 +7,7 @@ const NoteContext = createContext()
 //Create Provider
 //Remember that the provider is giving us access to the recipe book
 const NoteProvider = ({ children }) =>{
-    const [notes, setNotes] = useState(
-        //might need to drop a useEffect here later on
-
-
-    {})
+    const [notes, setNotes] = useState([])
     return <NoteContext.Provider value={{notes, setNotes}}>{children}</NoteContext.Provider>   
 }
 

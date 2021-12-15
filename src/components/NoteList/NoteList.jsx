@@ -7,16 +7,16 @@ export default function NoteList() {
 
     return (
         <div>
-            <h1>Notes</h1>
-            {/* <ul>
-             {notes.map((note)=> {
+            <h1>Message Board</h1>
+            <ul>
+             {notes.map((note, i)=> {
                  return(
-                    <li key={`${note.name}-${note.message}`}>
+                    <li key={`${note.name}-${note.message}-${i}`}>
                     <Note note={note} />
                     </li> 
                  )
              })}   
-            </ul> */}
+            </ul>
         </div>
     )
 }

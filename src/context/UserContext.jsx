@@ -7,11 +7,7 @@ const UserContext = createContext()
 //Create Provider
 //Remember that the provider is giving us access to the recipe book
 const UserProvider = ({ children }) =>{
-    const [user, setUser] = useState(
-        //might need to drop a useEffect here later on
-
-
-    {})
+    const [user, setUser] = useState([])
     return <UserContext.Provider value={{ user, setUser }}>{children}</UserContext.Provider>   
 }
 

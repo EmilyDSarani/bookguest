@@ -1,4 +1,4 @@
-import React from 'react-dom'
+import React from 'react'
 import Home from './views/Home/Home'
 import Layout from './views/Layout/Layout'
 
