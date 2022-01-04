@@ -14,8 +14,8 @@ export default function GuestBook() {
         //I need to be able to update the name of the user here...
         //if it is not a note from the user, return
         if (!inputNote) return
-        //I will need to take the guestNote and return their note? when the setUser gets set... 
-        setUser(name)
+         
+        
         //then...with setNotes, I will need to set the message of that user
         //we want to spread the notes so that it will render all of the notes we have
         //we then want to be able to set the user name and their message
@@ -80,7 +80,7 @@ const nameDisplay =(
                     setUser('')
                     setName('')
                 }}>
-                    Not {name}?
+                    Logout
                 </button>
                  )}  
             </div>
