@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function authForm() {
+export function authForm(inputs = {}) {
 const [formState, setFormState] = useState(inputs);
 
 const handleFormChange = (e) =>{
