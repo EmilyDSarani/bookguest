@@ -1,11 +1,15 @@
-// import { Link, useLocation } from 'react-router-dom'
-// import { useUser } from '../../context/UserContext'
+import { useHistory, useLocation } from 'react-router-dom'
+import { useUser } from '../../context/UserContext'
 
 import { useLocation } from "react-router"
 
 export default function Auth() {
     const { user, setUser } = useUser()
+    const history = useHistory()
     const location = useLocation()
+    const auth = useUser();
+    
+    
 
     const { from } = location.state || {from: { pathname: '/'} };
 
