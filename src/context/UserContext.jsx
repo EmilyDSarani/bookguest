@@ -7,6 +7,7 @@ const UserContext = createContext()
 //Create Provider
 //Remember that the provider is giving us access to the recipe book
 const UserProvider = ({ children }) =>{
+    //originally this was ([]) which is a truthy statement. it thought the user was already logged in. when I set it to (''), it becomes a falsey statement
     const [user, setUser] = useState('')
 
 //adding to the recipe, we now have a login and logout component. 
