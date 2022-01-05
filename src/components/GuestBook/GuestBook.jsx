@@ -80,7 +80,7 @@ const nameDisplay =(
                     setUser('')
                     setName('')
                 }}>
-                    Logout
+                    Not {name}?
                 </button>
                  )}  
             </div>
