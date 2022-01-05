@@ -7,7 +7,7 @@ const UserContext = createContext()
 //Create Provider
 //Remember that the provider is giving us access to the recipe book
 const UserProvider = ({ children }) =>{
-    const [user, setUser] = useState([])
+    const [user, setUser] = useState('')
 
 //adding to the recipe, we now have a login and logout component. 
 //this is how we are checking our auth
