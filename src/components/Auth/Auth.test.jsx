@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react';
 import Auth from './Auth'
 import Home from '../../views/Home/Home'
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import { UserProvider } from '../../context/UserContext';
 import { MemoryRouter, Route, Switch } from 'react-router';
 
@@ -15,9 +16,9 @@ it('should pull up the Guestbook', async () =>{
                 <Route exact path ="/login">
                     <Auth />
                 </Route>
-                <Route exact path= "/">
+                <PrivateRoute exact path= "/">
                     <Home />
-                </Route>
+                </PrivateRoute>
                 </Switch>
             </MemoryRouter>
         </UserProvider>
