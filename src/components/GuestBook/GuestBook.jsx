@@ -4,7 +4,7 @@ import { useUser } from '../../context/UserContext'
 
 
 export default function GuestBook() {
-    const [name, setName] = useState('')
+    // const [name, setName] = useState('')
     const [inputNote, setInputNote] = useState('')
     //now we we need to access the Note state and User state 
     const { notes, setNotes } = useNotes()
@@ -14,13 +14,13 @@ export default function GuestBook() {
         //I need to be able to update the name of the user here...
         //if it is not a note from the user, return
         if (!inputNote) return
-        //I will need to take the guestNote and return their note? when the setUser gets set... 
-        setUser(name)
+         
+        
         //then...with setNotes, I will need to set the message of that user
         //we want to spread the notes so that it will render all of the notes we have
         //we then want to be able to set the user name and their message
         //this is the larger notes that is being kept globally
-        setNotes([...notes, {name, message: inputNote}])
+        setNotes([...notes, {name: user, message: inputNote}])
         //then i will need to setGuessNote...to maybe an empty string?
         //after user hits the button to add the note, this will render an empty string to clear it out
         setInputNote('')
@@ -78,9 +78,8 @@ const nameDisplay =(
                 type="button"
                 onClick={()=>{
                     setUser('')
-                    setName('')
                 }}>
-                    Not {name}?
+                    Not {user}?
                 </button>
                  )}  
             </div>

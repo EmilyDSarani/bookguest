@@ -5,54 +5,44 @@ exports[`renders App 1`] = `
   <div>
     <header>
       <p>
-        Signed in as 
-        <div />
+        Who is Signing?
       </p>
     </header>
-    <div>
-      <h1>
-        Thanks !
-      </h1>
+    <fieldset>
+      <legend>
+        Sign In
+      </legend>
       <form>
-        <div>
-          <div>
-            <label
-              class="labelText"
-              for="inputNote"
-            >
-              Enter Message
-            </label>
-          </div>
-          <div>
-            <textarea
-              id="inputNote"
-              placeholder="Your Note!"
-            />
-          </div>
-        </div>
-        <div>
-          <button
-            class="button"
-            type="submit"
-          >
-            Sign
-          </button>
-          <button
-            type="button"
-          >
-            Not 
-            
-            ?
-          </button>
-        </div>
+        <label
+          for="email"
+        >
+          Email
+        </label>
+        <input
+          id="email"
+          name="email"
+          type="text"
+          value=""
+        />
+         
+        <label
+          for="password"
+        >
+          Password
+        </label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          value=""
+        />
+        <button
+          type="submit"
+        >
+          Sign In
+        </button>
       </form>
-      <div>
-        <h1>
-          Message Board
-        </h1>
-        <ul />
-      </div>
-    </div>
+    </fieldset>
     <footer>
       <p>
         This footer is brought to you by the letter 'F'
