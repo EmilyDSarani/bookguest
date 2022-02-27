@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders App 1`] = `
+<div>
+  <div>
+    <header>
+      <p>
+        Signed in as 
+        <div />
+      </p>
+    </header>
+    <div>
+      <h1>
+        Thanks !
+      </h1>
+      <form>
+        <div>
+          <div>
+            <label
+              class="labelText"
+              for="inputNote"
+            >
+              Enter Message
+            </label>
+          </div>
+          <div>
+            <textarea
+              id="inputNote"
+              placeholder="Your Note!"
+            />
+          </div>
+        </div>
+        <div>
+          <button
+            class="button"
+            type="submit"
+          >
+            Sign
+          </button>
+          <button
+            type="button"
+          >
+            Not 
+            
+            ?
+          </button>
+        </div>
+      </form>
+      <div>
+        <h1>
+          Message Board
+        </h1>
+        <ul />
+      </div>
+    </div>
+    <footer>
+      <p>
+        This footer is brought to you by the letter 'F'
+      </p>
+    </footer>
+  </div>
+</div>
+`;
